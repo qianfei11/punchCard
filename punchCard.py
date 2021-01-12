@@ -6,10 +6,11 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-NAME = ''
-PASS = ''
-ADDR = ''
+NAME = '' # 用户名
+PASS = '' # 密码
+ADDR = '' # 具体地址
 UUID = ''
+LOCATION = '' # 浙江省
 
 url = 'https://nco.zjgsu.edu.cn/login'
 data = {
@@ -47,6 +48,7 @@ print r.text
 print '---------------------------------------------'
 data = {
     'uuid':UUID,
+    'locationInfo':LOCATION,
     'currentResd':ADDR,
     'fromHbToZjDate':'',
     'fromHbToZj':'C',
